@@ -1,0 +1,14 @@
+name: global-business-culture
+version: 1.0.0
+description: "Cross-cultural business intelligence: country culture briefs and home-vs-host gap analysis computed from bundled Meyer, Hofstede, GLOBE and Lewis data — offline, deterministic, no dependencies."
+author: "Eric Wong (pswong661-eng), GiGi (Hermes Agent)"
+license: MIT
+homepage: https://github.com/pswong661-eng/hermes-global-business-culture
+requires_hermes: ">=0.21"
+tags: [business, culture, negotiation, enterprise, international]
+platforms: [linux, macos, windows]
+provides_tools:
+  - culture_brief
+  - culture_gap_analysis
+  - culture_countries
+provides_hooks: []

@@ -1,0 +1,209 @@
+{
+  "_meta": "Region-level playbooks. A country's brief = region playbook + country highlights + country scale positions. Where a country diverges from its region, its highlights say so.",
+  "regions": {
+    "anglo": {
+      "label": "Anglo (US, Canada, UK, Ireland, Australia, New Zealand)",
+      "trust_currency": "Task-based: track record, contracts, punctual delivery. Trust grows through demonstrated competence and reliability; two strong deliveries beat five dinners.",
+      "decision_path": "Fast, individual accountability: an empowered manager decides in the meeting; decisions can be reopened when circumstances change.",
+      "communication": "Low-to-mid context: say what you mean, email is direct, humor softens but does not obscure.",
+      "contract": "The written contract is the deal. Deviations are negotiated as formal amendments.",
+      "etiquette": [
+        "Punctuality matters (5-10 min early in North America; slightly looser in Ireland)",
+        "First names common fast in US/CA/AU/NZ; wait a beat in UK/IE formal settings",
+        "Modest gifts only, and only after a deal or at holidays (policy limits in corporates)",
+        "Small talk: sport, weather, travel — avoid politics/religion at first meeting"
+      ],
+      "taboos": [
+        "Overselling or exaggerated claims (instant credibility loss)",
+        "Confusing Canada with the US, or Australia with New Zealand",
+        "Assuming London slang/irony translates literally"
+      ]
+    },
+    "latin-europe": {
+      "label": "Latin Europe (France, Belgium, Italy, Spain, Portugal, Greece)",
+      "trust_currency": "Mixed: personal rapport opens doors, intellectual respect sustains them. Eloquence and form matter as much as content.",
+      "decision_path": "Hierarchical with consultation: the senior cadre/patron decides; the path runs through formal channels dressed in personal relationships.",
+      "communication": "Mid-to-high context, rhetorically rich: theory and method before conclusion (esp. France); interruption signals engagement (esp. Italy, Greece).",
+      "contract": "Important but treated as a living framework; terms get revisited as relationships and realities evolve.",
+      "etiquette": [
+        "Titles and vous/Lei formality until invited",
+        "Business lunches are real work (1.5-2h); dinner invitations are a trust milestone",
+        "Dress well — appearance signals respect for the counterpart",
+        "August vacations and regional holidays blank out decision-making"
+      ],
+      "taboos": [
+        "Jumping to price before establishing the intellectual frame",
+        "Public criticism or losing your composure",
+        "Treating a heated debate as hostility"
+      ]
+    },
+    "germanic": {
+      "label": "Germanic Europe (Germany, Switzerland, Austria, Netherlands)",
+      "trust_currency": "Task-based and evidence-based: credentials, precision, documented competence. Overpromising is the cardinal sin.",
+      "decision_path": "Structured and deliberate: analysis first, decision once, then rigid execution. Consensus in NL/CH slows the front end and accelerates the back end.",
+      "communication": "Low context, direct negative feedback: criticism of the work is normal and expected; soften it yourself, don't expect them to.",
+      "contract": "Near-sacred: what is signed happens, exactly as written. Compliance and process rigor are trust signals.",
+      "etiquette": [
+        "Punctuality is respect (early is on time)",
+        "Titles (Dr., Prof.) in D/A/CH until offered otherwise",
+        "Agendas are contracts; keep to them and send follow-ups in writing",
+        "Separate business meals are functional, not relationship theaters (esp. NL)"
+      ],
+      "taboos": [
+        "Hype, adjectives, and salesmanship",
+        "Surprise changes to a settled plan or agenda",
+        "Casual dress or chummy first-naming at first meetings (D/A/CH)"
+      ]
+    },
+    "nordic": {
+      "label": "Nordic Europe (Sweden, Norway, Denmark, Finland)",
+      "trust_currency": "Task-based with flat-hierarchy candor: honesty, modesty, consistency. Trust is high at start and lost by misbehavior.",
+      "decision_path": "Consensus-first (esp. Sweden): many consultations, one durable decision; the boss facilitates rather than commands.",
+      "communication": "Low-mid context, restrained: say it plainly, pause before answering, silence is comfortable. Modesty law: never claim superiority.",
+      "contract": "Reliable and simple: honest terms, honest execution; disputes are rare and handled plainly.",
+      "etiquette": [
+        "Flat dress code, first names immediately, minimal titles",
+        "Respect 9-to-4 meeting windows; never Friday afternoon; July and Christmas are walls",
+        "Lunch is short; the real relationship ritual is the cabin/sauna/ski invitation",
+        "Credit the group, never yourself"
+      ],
+      "taboos": [
+        "Self-aggrandizement or flashing wealth/status",
+        "Pressing for a decision before consensus forms",
+        "Overfamiliarity or aggressive persuasion techniques"
+      ]
+    },
+    "eastern-europe": {
+      "label": "Eastern Europe (Poland, Czechia, Hungary, Romania, Russia)",
+      "trust_currency": "Personal and guarded at first: proven loyalty over time. Hospitality is generous once you're inside; skepticism is the default outside.",
+      "decision_path": "Top-down: the director/owner decides; formal hierarchy respected. Implementation bends around reality (improvisation is a survival skill).",
+      "communication": "Mid-high context with direct edges: pessimism-first framing, irony, reading what's unsaid. Russians negotiate in wide ranges strategically.",
+      "contract": "Treated as a power snapshot: signed, but renegotiated when leverage or circumstances shift. Detail and contingencies still expected on paper.",
+      "etiquette": [
+        "Formal titles and surnames at first; flowers/odd-number customs if invited home",
+        "Vodka toasts (Russia, Poland) — pace yourself, never refuse the first",
+        "Bring documents, certificates, stamps: paperwork confers legitimacy",
+        "Strong tea/coffee hospitality — always accept"
+      ],
+      "taboos": [
+        "Disrespecting seniority or skipping the hierarchy",
+        "Treating signed paper as final protection without relationship maintenance",
+        "Comparing the country unfavorably to 'the West'"
+      ]
+    },
+    "east-asia": {
+      "label": "East Asia (China, Japan, South Korea, Taiwan, Hong Kong)",
+      "trust_currency": "Relationship-based: banquets, favors, time invested. Guanxi/kankei networks are the operating system — a warm introduction is worth a year of cold outreach.",
+      "decision_path": "Consensus beneath hierarchy: nemawashi/ringi (Japan) pre-aligns silently; China pre-aligns before the meeting; the senior person ratifies. Slow yes, fast execution, never reopened.",
+      "communication": "High context: what is NOT said carries the message. 'It is difficult' = no. Silence = processing. Save face for everyone, always.",
+      "contract": "The contract BEGINS the relationship (China: renegotiable as circumstances evolve; Japan: near-absolute once sealed).",
+      "etiquette": [
+        "Business cards with two hands, read respectfully, laid out by seating (Japan/Korea)",
+        "Banquet seating by seniority; toast the senior counterpart first; never pour your own drink",
+        "Modest, thoughtful gifts given/received with two hands (mind anti-corruption law in China)",
+        "Punctuality absolute in Japan; keep agendas tight everywhere"
+      ],
+      "taboos": [
+        "Public correction or causing loss of face (mianzi/kibun) — fatal and remembered",
+        "Forcing a direct 'no' or pushing for a fast decision",
+        "White/black gift wrapping, clocks, or anything with unlucky number 4 (China)",
+        "Political small talk (cross-strait, Korea-Japan history, CCP topics)"
+      ]
+    },
+    "southeast-asia": {
+      "label": "Southeast Asia (ASEAN: Singapore, Malaysia, Indonesia, Thailand, Vietnam, Philippines, Laos, Cambodia, Myanmar)",
+      "trust_currency": "Relationship-based to the extreme: meals, family inquiries, patient time. Deals move at the speed of personal confidence, not paper.",
+      "decision_path": "Hierarchical with consensus performance: the senior director/patron decides privately; meetings ratify what was already socialized. Verbal signals from the senior person outweigh written process.",
+      "communication": "High context, harmony-preserving: 'yes' means 'I hear you'; refusals arrive as silence, deflection, or 'we will try'. Kreng jai (TH), anade (MM), hiya (PH) all suppress open disagreement.",
+      "contract": "A written snapshot of a relationship: useful for alignment, but reality is renegotiated verbally as circumstances change. Keep warm contact between formal milestones.",
+      "etiquette": [
+        "Wai/sompeah greetings by seniority; never touch heads, never point feet (TH/KH/LA/MM)",
+        "Right hand or both hands for giving/receiving; remove shoes when entering homes/offices",
+        "Halal awareness (MY/ID): no alcohol at Malay/Muslim meals; Ramadan hours respected",
+        "Accept tea and hospitality always; decline graciously only with a reason",
+        "Monarchy (TH) and religion (monks, wats, pagodas) are sacred — zero jokes"
+      ],
+      "taboos": [
+        "Displaying anger or impatience — it marks YOU as untrustworthy",
+        "Public criticism or forcing a face-losing admission",
+        "Rushing to contract before the relationship is cooked",
+        "Assuming ASEAN is one culture: Singapore ≠ Indonesia ≠ Laos"
+      ]
+    },
+    "south-asia": {
+      "label": "South Asia (India, Pakistan, Bangladesh, Sri Lanka)",
+      "trust_currency": "Relationship-based with family-network roots: personal trust, hospitality exchanged, introducers vouched. Family firm patriarchs own decisions.",
+      "decision_path": "Steeply hierarchical: deference to seniors expected; decisions concentrated at the top, executed with jugaad flexibility below.",
+      "communication": "High context, harmony-preserving: no direct 'no'; head-wobble (India) = polite non-commitment; enthusiasm ≠ commitment.",
+      "contract": "Negotiable instrument: bargaining is a sport, timelines are elastic, renegotiation normal. Your deadlines will be enforced harder than theirs.",
+      "etiquette": [
+        "Ask about family/health (avoid asking about wives directly in PK/BD)",
+        "Respect dietary codes by community (vegetarian, halal, no beef)",
+        "Titles matter (Dr./Engineer/Sir); wait for first-name permission",
+        "Tea/coffee and snacks always accepted; festival calendars (Diwali, Eid) pause business"
+      ],
+      "taboos": [
+        "Left hand for giving/receiving; feet/shoes pointing at people",
+        "Skip-level pressure or bypassing the senior decision-maker",
+        "Cold, purely transactional approach without a warm introducer"
+      ]
+    },
+    "mena": {
+      "label": "Middle East & North Africa (UAE, Saudi, Egypt, Turkey, Israel*)",
+      "trust_currency": "Relationship-based: majlis/coffee hospitality, extended courtesy talk, family reputation. Wasta (intercession networks) is infrastructure.",
+      "decision_path": "Top-down via the senior male/patron: the decision-maker's private blessing is the decision; formal process follows informally settled reality.",
+      "communication": "High context with lavish politeness: direct refusal almost never spoken; 'insha'Allah' separates intent from dated commitment (Israel is the outlier: dugri directness).",
+      "contract": "Start of a relationship: terms flex as the relationship and power balance evolve; personal guarantee outranks corporate paper.",
+      "etiquette": [
+        "Right hand only for giving/receiving/eating",
+        "Accept coffee/dates; shake the tiny cup to decline refill; praise the hospitality",
+        "Dress conservatively; meetings may be interrupted by phone/visitors — flow with it",
+        "Ramadan: no public eating/drinking by day, shortened hours; Friday-Saturday weekend (Gulf)",
+        "Never ask about wives/female family members"
+      ],
+      "taboos": [
+        "Rushing the pitch before courtesy rituals complete",
+        "Public loss of face, criticism, or showing anger",
+        "Alcohol/pork gifting; sole of shoe displayed toward anyone",
+        "Middle East politics, religion debates, or Israel/Arab conflations"
+      ]
+    },
+    "subsaharan-africa": {
+      "label": "Sub-Saharan Africa (Nigeria, Kenya, South Africa*)",
+      "trust_currency": "Relationship-communal: extended greetings and family inquiries ARE the meeting; networks (clan, church, community) decide what org charts only record.",
+      "decision_path": "Elders and hierarchy first, then communal consultation: the senior person opens and closes; ubuntu consensus legitimizes implementation.",
+      "communication": "High context, warm, indirect on refusal: a soft answer often hides a hard no; read intermediaries and body language.",
+      "contract": "Important but relationship-negotiated: personal commitment and follow-up visits sustain terms paper alone cannot enforce.",
+      "etiquette": [
+        "Greet EVERYONE in seniority order, handshake with two hands or right hand + left-hand touch for elders",
+        "Titles are mandatory (Chief, Doctor, Engineer, Pastor) — never first-name a senior",
+        "Accept hospitality generously; small thoughtful gifts honor the relationship (never bribes)",
+        "Time is event-based: meetings start when relationships are ready; build schedule slack"
+      ],
+      "taboos": [
+        "Skipping the greeting ritual to 'get to business'",
+        "Disrespecting elders or community structures",
+        "Left-hand exchanges; public correction of a senior person"
+      ]
+    },
+    "latin-america": {
+      "label": "Latin America (Mexico, Brazil, Argentina, Chile, Colombia, Peru)",
+      "trust_currency": "Personalismo: the person IS the deal. Warmth, simpatía, family references, and shared meals build the confidence that paper only records.",
+      "decision_path": "Hierarchical with staged consensus: the patrão/dueño decides; meetings build the feeling of agreement that the boss ratifies.",
+      "communication": "High context, emotionally expressive: harmony-preserving ('yes' to be polite), indirect criticism, loud friendly interruption = interest.",
+      "contract": "Framework for the relationship: details flex; renegotiation is normal; personal commitment enforces more than clauses.",
+      "etiquette": [
+        "Stand-up greetings, firm handshake, sustained eye contact, closer personal distance",
+        "Titles (Licenciado, Ingeniero, Don/Doña) and formal usted until invited",
+        "Long business lunches/dinners are the real negotiation arena",
+        "Accept hospitality enthusiastically; modest gratitude gifts appreciated"
+      ],
+      "taboos": [
+        "Cold, brusque, all-business demeanor",
+        "Public embarrassment or confrontational feedback",
+        "Assuming LatAm is one market (Chile ≠ Brazil ≠ Mexico)",
+        "US-centric comparisons or arrogance about 'efficiency'"
+      ]
+    }
+  }
+}

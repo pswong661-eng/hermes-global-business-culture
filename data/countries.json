@@ -1,0 +1,662 @@
+{
+  "_meta": {
+    "source": "Approximate positions distilled from Erin Meyer (The Culture Map, 2014 scale charts), Geert Hofstede Insights country scores, GLOBE cluster research, and Richard Lewis culture-type model. Values are directional approximations for orientation, not precise measurements. Countries marked extrapolated=true are not in the original published sets and are positioned from their GLOBE cluster neighbours by the plugin authors.",
+    "scales": {
+      "meyer": {
+        "comm": "Communicating: 0=low-context (explicit, precise) 100=high-context (implicit, layered)",
+        "eval": "Evaluating: 0=direct negative feedback 100=indirect negative feedback (upgraders, third parties)",
+        "lead": "Leading: 0=egalitarian (boss as peer) 100=hierarchical (boss as father figure / status distance)",
+        "decide": "Deciding: 0=consensual (group decides) 100=top-down (boss decides)",
+        "trust": "Trusting: 0=task-based trust (from competence/reliability) 100=relationship-based trust (from meals, time, family)",
+        "dis": "Disagreeing: 0=confrontational (open debate is good) 100=avoids confrontation (open debate harms harmony)",
+        "sched": "Scheduling: 0=linear-time (agenda, punctuality) 100=flexible-time (relationships > clock)",
+        "pers": "Persuading: 0=applications-first (conclusion up front) 100=principles-first (theory before application)"
+      },
+      "hofstede": {
+        "pdi": "Power Distance", "idv": "Individualism", "mas": "Motivation towards Achievement and Success (masculinity)",
+        "uai": "Uncertainty Avoidance", "lto": "Long-Term Orientation", "ivr": "Indulgence vs Restraint"
+      }
+    }
+  },
+  "countries": {
+    "United States": {
+      "region": "anglo", "globe_cluster": "Anglo", "lewis": "linear-active",
+      "meyer": {"comm": 55, "eval": 45, "lead": 25, "decide": 60, "trust": 25, "dis": 30, "sched": 30, "pers": 15},
+      "hofstede": {"pdi": 40, "idv": 91, "mas": 62, "uai": 46, "lto": 26, "ivr": 68},
+      "highlights": [
+        "Trust is task-based: competence, punctual delivery and follow-through build credit faster than dinners.",
+        "'How are you?' is a greeting, not a question; 'let's do lunch' is a friendly close, not always an invite.",
+        "Get to the point fast: conclusion first, then support (most applications-first culture on earth).",
+        "Positive framing expected: package criticism as 'opportunities'; blunt negativity reads as hostility.",
+        "Decisions come fast and are revisited just as fast — a signed agreement can be reopened by a new VP.",
+        "Litigation mindset: the written contract is the relationship's boundary."
+      ]
+    },
+    "Canada": {
+      "region": "anglo", "globe_cluster": "Anglo", "lewis": "linear-active",
+      "meyer": {"comm": 55, "eval": 45, "lead": 25, "decide": 50, "trust": 28, "dis": 35, "sched": 30, "pers": 20},
+      "hofstede": {"pdi": 39, "idv": 80, "mas": 52, "uai": 48, "lto": 36, "ivr": 68},
+      "highlights": [
+        "Softer than the US on disagreement: upgraders and hedges ('perhaps', 'maybe we could') precede criticism.",
+        "Quebec behaves closer to Latin Europe: more relationship-oriented, longer lunches, more rhetorical flair.",
+        "Consensus-seeking is a national value; a decision imposed without consultation breeds quiet resistance.",
+        "Punctual, contract-respecting, but the relationship layer matters more than in the US."
+      ]
+    },
+    "United Kingdom": {
+      "region": "anglo", "globe_cluster": "Anglo", "lewis": "linear-active",
+      "meyer": {"comm": 60, "eval": 55, "lead": 30, "decide": 55, "trust": 30, "dis": 40, "sched": 35, "pers": 25},
+      "hofstede": {"pdi": 35, "idv": 89, "mas": 66, "uai": 35, "lto": 51, "ivr": 69},
+      "highlights": [
+        "High-context irony and understatement: 'quite good' may mean excellent; 'a bit of a problem' may mean disaster.",
+        "Indirect negative feedback via British humour and euphemism — decode the joke before responding literally.",
+        "Email formality: open with small talk, avoid first names until offered, sign off politely.",
+        "Class and school ties still lubricate trust; a shared alma mater beats a sharp pitch.",
+        "Decisions drift through meetings-before-the-meeting; the room rarely surprises the principals."
+      ]
+    },
+    "Ireland": {
+      "region": "anglo", "globe_cluster": "Anglo", "lewis": "linear-active",
+      "meyer": {"comm": 60, "eval": 55, "lead": 30, "decide": 50, "trust": 40, "dis": 45, "sched": 40, "pers": 35},
+      "hofstede": {"pdi": 28, "idv": 70, "mas": 68, "uai": 35, "lto": 24, "ivr": 65},
+      "highlights": [
+        "Storytelling and humour open meetings; skip the small talk and you seem cold, not efficient.",
+        "More relationship-driven than the UK: the pub conversation is part of the deal, not a distraction.",
+        "Criticism is wrapped; be careful not to read Irish politeness as full agreement."
+      ]
+    },
+    "Australia": {
+      "region": "anglo", "globe_cluster": "Anglo", "lewis": "linear-active",
+      "meyer": {"comm": 30, "eval": 40, "lead": 20, "decide": 50, "trust": 25, "dis": 30, "sched": 30, "pers": 18},
+      "hofstede": {"pdi": 38, "idv": 90, "mas": 61, "uai": 51, "lto": 21, "ivr": 71},
+      "highlights": [
+        "Most egalitarian business culture: first names immediately, 'tall poppy' disdain for self-importance.",
+        "Direct, plain language; mock-modesty and self-deprecating humour earn trust, polish reads as waffle.",
+        "Debate is sport — disagreement is engagement, not hostility."
+      ]
+    },
+    "New Zealand": {
+      "region": "anglo", "globe_cluster": "Anglo", "lewis": "linear-active",
+      "meyer": {"comm": 35, "eval": 42, "lead": 20, "decide": 50, "trust": 25, "dis": 30, "sched": 30, "pers": 18},
+      "hofstede": {"pdi": 22, "idv": 79, "mas": 58, "uai": 49, "lto": 33, "ivr": 75},
+      "highlights": [
+        "Like Australia but quieter and more consensual; consult stakeholders before announcing.",
+        "Maori protocols may open formal events — stand when welcomed, never speak over a mihi.",
+        "Modesty rules: overselling yourself or your company backfires."
+      ]
+    },
+    "France": {
+      "region": "latin-europe", "globe_cluster": "Latin Europe", "lewis": "linear-active",
+      "meyer": {"comm": 70, "eval": 65, "lead": 55, "decide": 70, "trust": 50, "dis": 45, "sched": 55, "pers": 85},
+      "hofstede": {"pdi": 68, "idv": 71, "mas": 43, "uai": 86, "lto": 63, "ivr": 48},
+      "highlights": [
+        "Most principles-first persuaders in the West: method, logic and theory before conclusions — or you look lightweight.",
+        "Debate is intellectually valued; challenging your argument is respect, not attack.",
+        "The boss decides (grande école hierarchy); build the technical case for the cadre, not the crowd.",
+        "Lunch is business: relationship and hierarchy play out over the table, and August is dead month.",
+        "Criticism is direct in content, elegant in form; a French 'interesting' often means doubtful."
+      ]
+    },
+    "Belgium": {
+      "region": "latin-europe", "globe_cluster": "Latin Europe", "lewis": "multi-active",
+      "meyer": {"comm": 65, "eval": 60, "lead": 45, "decide": 55, "trust": 45, "dis": 50, "sched": 40, "pers": 65},
+      "hofstede": {"pdi": 65, "idv": 75, "mas": 54, "uai": 94, "lto": 82, "ivr": 57},
+      "highlights": [
+        "Split personality: Flanders leans Dutch (low-context, consensus), Wallonia leans French (hierarchical, rhetorical).",
+        "High uncertainty avoidance: bring structure, written follow-ups, and don't improvise the agenda.",
+        "Compromise culture — the country runs on coalition; expect negotiation to be slow but durable."
+      ]
+    },
+    "Italy": {
+      "region": "latin-europe", "globe_cluster": "Latin Europe", "lewis": "multi-active",
+      "meyer": {"comm": 75, "eval": 70, "lead": 60, "decide": 65, "trust": 65, "dis": 45, "sched": 70, "pers": 65},
+      "hofstede": {"pdi": 50, "idv": 76, "mas": 70, "uai": 75, "lto": 61, "ivr": 30},
+      "highlights": [
+        "Relationships and bella figura first: who you are and how you present carries the deal.",
+        "Flexible time: meetings start late, run long, and interrupt each other — that is engagement, not chaos.",
+        "Formal titles and dress matter at first meeting; warmth and expressiveness build credit.",
+        "Northern and southern Italy differ sharply in pacing and formality — calibrate per city."
+      ]
+    },
+    "Spain": {
+      "region": "latin-europe", "globe_cluster": "Latin Europe", "lewis": "multi-active",
+      "meyer": {"comm": 75, "eval": 70, "lead": 60, "decide": 60, "trust": 65, "dis": 50, "sched": 72, "pers": 60},
+      "hofstede": {"pdi": 57, "idv": 51, "mas": 42, "uai": 86, "lto": 48, "ivr": 44},
+      "highlights": [
+        "Personal relationship is the deal's engine: invest in sobremesa (the long table conversation after lunch).",
+        "Hierarchy with a human face: the senior person decides, but charm opens the door.",
+        "Scheduling is flexible and late dinner is a business arena; August and Christmas week are dead.",
+        "Face-saving matters — criticize privately, never across the table."
+      ]
+    },
+    "Portugal": {
+      "region": "latin-europe", "globe_cluster": "Latin Europe", "lewis": "multi-active",
+      "meyer": {"comm": 70, "eval": 68, "lead": 60, "decide": 60, "trust": 65, "dis": 55, "sched": 70, "pers": 62},
+      "hofstede": {"pdi": 63, "idv": 27, "mas": 31, "uai": 104, "lto": 28, "ivr": 33},
+      "highlights": [
+        "Among the world's highest uncertainty-avoidance: detail the plan, the contract, the contingencies.",
+        "Relationship-first and formal: titles (Doutor), patience, and family references build standing.",
+        "Group harmony over confrontation; a polite 'let's study it' can be a soft no."
+      ]
+    },
+    "Greece": {
+      "region": "latin-europe", "globe_cluster": "Latin Europe", "lewis": "multi-active",
+      "meyer": {"comm": 78, "eval": 72, "lead": 65, "decide": 65, "trust": 70, "dis": 50, "sched": 75, "pers": 65},
+      "hofstede": {"pdi": 60, "idv": 35, "mas": 57, "uai": 112, "lto": 45, "ivr": 50},
+      "highlights": [
+        "Highest recorded uncertainty avoidance: reduce risk on paper and in person, repeatedly.",
+        "High-context, personal networks (gnosi) open doors that formal channels never will.",
+        "Lively interruption = interest; a silent Greek meeting is a failed one."
+      ]
+    },
+    "Germany": {
+      "region": "germanic", "globe_cluster": "Germanic Europe", "lewis": "linear-active",
+      "meyer": {"comm": 25, "eval": 20, "lead": 25, "decide": 40, "trust": 25, "dis": 30, "sched": 10, "pers": 75},
+      "hofstede": {"pdi": 35, "idv": 67, "mas": 66, "uai": 65, "lto": 83, "ivr": 40},
+      "highlights": [
+        "Most low-context communicators in the West: say exactly what you mean; euphemism reads as evasion.",
+        "Direct negative feedback is professional, not personal — do not soften, do not take offence.",
+        "Most linear schedulers: the agenda is a contract; being 10 minutes early is on time.",
+        "Principles-first: explain the method and the 'why' before the price, or you seem unserious.",
+        "Titles and order matter (Dr., Herr/Frau + surname); decisions are slow to form, then immovable.",
+        "Separate the person from the problem is NOT the local rule — criticism lands on the work, but relationships stay formal until you are invited in."
+      ]
+    },
+    "Switzerland": {
+      "region": "germanic", "globe_cluster": "Germanic Europe", "lewis": "linear-active",
+      "meyer": {"comm": 25, "eval": 30, "lead": 30, "decide": 40, "trust": 25, "dis": 35, "sched": 10, "pers": 70},
+      "hofstede": {"pdi": 34, "idv": 68, "mas": 70, "uai": 58, "lto": 74, "ivr": 56},
+      "highlights": [
+        "Punctuality is a moral value; late = disrespect, call ahead the moment you know.",
+        "Consensus across stakeholders before any announcement — surprise is a breach of process.",
+        "Modest, precise, understated: exaggeration destroys credibility instantly.",
+        "German/French/Italian cantons differ; match language and style to the region."
+      ]
+    },
+    "Austria": {
+      "region": "germanic", "globe_cluster": "Germanic Europe", "lewis": "linear-active",
+      "meyer": {"comm": 45, "eval": 50, "lead": 50, "decide": 55, "trust": 45, "dis": 45, "sched": 40, "pers": 72},
+      "hofstede": {"pdi": 11, "idv": 55, "mas": 79, "uai": 70, "lto": 60, "ivr": 53},
+      "highlights": [
+        "Formal and title-proud (Herr Doktor) despite low power distance scores — hierarchy is ceremonial and real.",
+        "More hierarchical and formal than Germany in manner; more consensual in structure.",
+        "Respect competence and order; small talk is thin, get to substance."
+      ]
+    },
+    "Netherlands": {
+      "region": "germanic", "globe_cluster": "Germanic Europe", "lewis": "linear-active",
+      "meyer": {"comm": 20, "eval": 15, "lead": 15, "decide": 35, "trust": 20, "dis": 25, "sched": 20, "pers": 25},
+      "hofstede": {"pdi": 38, "idv": 80, "mas": 14, "uai": 53, "lto": 44, "ivr": 68},
+      "highlights": [
+        "Bluntest feedback culture in the world: Dutch directness is candour, not rudeness — answer in kind.",
+        "Most egalitarian: everyone's view is heard regardless of rank; the junior engineer may shoot down your CTO.",
+        "Consensus (poldermodel) makes deciding slow, but implementation is fast and everyone is committed.",
+        "Calvinist modesty: splashing wealth or exaggerating marks you as untrustworthy.",
+        "Lunch is a sandwich at the desk; don't turn it into a relationship ritual."
+      ],
+      "aliases": ["holland"]
+    },
+    "Sweden": {
+      "region": "nordic", "globe_cluster": "Nordic Europe", "lewis": "linear-active",
+      "meyer": {"comm": 40, "eval": 50, "lead": 15, "decide": 25, "trust": 25, "dis": 30, "sched": 15, "pers": 55},
+      "hofstede": {"pdi": 31, "idv": 71, "mas": 5, "uai": 29, "lto": 53, "ivr": 78},
+      "highlights": [
+        "Extreme consensus (samförstånd): decisions take many meetings but are then bulletproof — never force a vote early.",
+        "Flat hierarchy: the boss is a coordinator, not a commander; address everyone as equal.",
+        "Modesty law (Jantelagen): never claim to be better than the group; credit the team.",
+        "Work-life boundary is sacred: schedule meetings inside 9-4, never Friday afternoon; July is out.",
+        "Silence is comfort, not awkwardness; pause before answering shows respect."
+      ]
+    },
+    "Norway": {
+      "region": "nordic", "globe_cluster": "Nordic Europe", "lewis": "linear-active",
+      "meyer": {"comm": 35, "eval": 50, "lead": 18, "decide": 30, "trust": 25, "dis": 30, "sched": 15, "pers": 55},
+      "hofstede": {"pdi": 31, "idv": 69, "mas": 8, "uai": 50, "lto": 44, "ivr": 55},
+      "highlights": [
+        "Like Sweden but more direct and less ceremonially consensus-bound; friluftsliv small talk (cabin, ski) earns warmth.",
+        "Understatement and egalitarianism; titles are almost never used.",
+        "Trust starts high and is lost by behaviour — transparent, plain dealing wins."
+      ]
+    },
+    "Denmark": {
+      "region": "nordic", "globe_cluster": "Nordic Europe", "lewis": "linear-active",
+      "meyer": {"comm": 40, "eval": 50, "lead": 20, "decide": 30, "trust": 25, "dis": 30, "sched": 15, "pers": 55},
+      "hofstede": {"pdi": 18, "idv": 74, "mas": 16, "uai": 23, "lto": 35, "ivr": 70},
+      "highlights": [
+        "Lowest uncertainty avoidance + low hierarchy: improvise, pilot, iterate — heavy planning reads as insecurity.",
+        "Hygge atmosphere in meetings: informal, humorous, first names, but decisions still go through consensus.",
+        "Humour is dry and pervasive; being able to take a joke is a trust signal."
+      ]
+    },
+    "Finland": {
+      "region": "nordic", "globe_cluster": "Nordic Europe", "lewis": "linear-active",
+      "meyer": {"comm": 45, "eval": 55, "lead": 22, "decide": 30, "trust": 25, "dis": 35, "sched": 15, "pers": 60},
+      "hofstede": {"pdi": 33, "idv": 63, "mas": 26, "uai": 59, "lto": 38, "ivr": 57},
+      "highlights": [
+        "Silence is communication: Finns pause long before answering — fill it and you lose standing.",
+        "Say what you mean, mean what you say: a Finn's 'maybe' is a real maybe, 'yes' is iron.",
+        "Sauna invitation is a relationship milestone; declining politely is fine, joining builds deep trust.",
+        "Less consensus theatre than Sweden; more quiet personal responsibility."
+      ]
+    },
+    "Poland": {
+      "region": "eastern-europe", "globe_cluster": "Eastern Europe", "lewis": "multi-active",
+      "meyer": {"comm": 60, "eval": 55, "lead": 55, "decide": 60, "trust": 60, "dis": 45, "sched": 50, "pers": 65},
+      "hofstede": {"pdi": 68, "idv": 60, "mas": 64, "uai": 93, "lto": 38, "ivr": 80},
+      "highlights": [
+        "Formal hierarchy with hospitality: respect titles, expect warmth once invited past the formality.",
+        "High uncertainty avoidance: detailed contracts, contingency clauses, repeated written confirmation.",
+        "History made flexibility a survival skill — Poles improvise around rules while demanding them on paper."
+      ]
+    },
+    "Czechia": {
+      "region": "eastern-europe", "globe_cluster": "Eastern Europe", "lewis": "multi-active",
+      "meyer": {"comm": 60, "eval": 55, "lead": 55, "decide": 60, "trust": 55, "dis": 50, "sched": 45, "pers": 65},
+      "hofstede": {"pdi": 57, "idv": 58, "mas": 57, "uai": 74, "lto": 70, "ivr": 29},
+      "highlights": [
+        "Reserved until trust forms; initial formality and titles (pan/paní) are the entry ticket.",
+        "Skepticism is a cultural default — a Czech 'no' said with irony may be negotiable; a warm 'yes' may not.",
+        "Beer culture opens relationships; business stays formal longer than in Poland."
+      ]
+    },
+    "Hungary": {
+      "region": "eastern-europe", "globe_cluster": "Eastern Europe", "lewis": "multi-active",
+      "meyer": {"comm": 55, "eval": 55, "lead": 55, "decide": 60, "trust": 55, "dis": 50, "sched": 50, "pers": 68},
+      "hofstede": {"pdi": 46, "idv": 80, "mas": 88, "uai": 82, "lto": 50, "ivr": 31},
+      "highlights": [
+        "Pessimistic-precise communication: problems are stated first and plainly; optimism reads as naivety.",
+        "Status-conscious and formal at the table, but proud of technical excellence — lead with expertise.",
+        "High uncertainty avoidance + high masculinity: strong plans, strong egos, hard bargaining."
+      ]
+    },
+    "Romania": {
+      "region": "eastern-europe", "globe_cluster": "Eastern Europe", "lewis": "multi-active",
+      "meyer": {"comm": 70, "eval": 68, "lead": 65, "decide": 70, "trust": 65, "dis": 55, "sched": 60, "pers": 68},
+      "hofstede": {"pdi": 90, "idv": 30, "mas": 42, "uai": 90, "lto": 52, "ivr": 20},
+      "highlights": [
+        "High power distance, relationship deals: the patron at the top decides; work the trusted introducer.",
+        "High-context yes: agreement may mean 'I hear you' — confirm in writing through the hierarchy.",
+        "Hospitality is generous and refusal offends; accept the coffee, the tuica story earns the contract."
+      ]
+    },
+    "Russia": {
+      "region": "eastern-europe", "globe_cluster": "Eastern Europe", "lewis": "multi-active",
+      "meyer": {"comm": 75, "eval": 65, "lead": 75, "decide": 80, "trust": 75, "dis": 55, "sched": 70, "pers": 72},
+      "hofstede": {"pdi": 93, "idv": 39, "mas": 36, "uai": 95, "lto": 81, "ivr": 20},
+      "highlights": [
+        "Avtoritet rules: the senior person decides and being introduced to the right one is 80% of the deal.",
+        "Trust is personal and slow: banquets, toasts and dacha invitations are the real negotiation.",
+        "High-context and strategic: what is not said is the message; test statements against interests.",
+        "Extreme-range bargaining is normal — the first price is theatre; anchor and hold with warmth.",
+        "Contracts are a snapshot of the balance of power, not a final word; renegotiation is expected when power shifts."
+      ]
+    },
+    "Turkey": {
+      "region": "mena", "globe_cluster": "Eastern Europe", "lewis": "multi-active",
+      "meyer": {"comm": 80, "eval": 78, "lead": 75, "decide": 78, "trust": 80, "dis": 70, "sched": 78, "pers": 65},
+      "hofstede": {"pdi": 66, "idv": 37, "mas": 45, "uai": 85, "lto": 46, "ivr": 49},
+      "highlights": [
+        "Relationship-first: tea, meals and long personal talk precede business; rushing reads as disrespect.",
+        "Hierarchical and status-aware: meet the decision-maker, honor the pecking order, dress well.",
+        "Hospitality is a moral code — praise the tea, never criticize Turkey, and expect vigorous, friendly bargaining.",
+        "'Inşallah' framing on commitments: distinguish enthusiasm from a dated, owned promise."
+      ]
+    },
+    "Israel": {
+      "region": "mena", "globe_cluster": "Eastern Europe", "lewis": "multi-active",
+      "meyer": {"comm": 50, "eval": 35, "lead": 45, "decide": 60, "trust": 45, "dis": 15, "sched": 55, "pers": 50},
+      "hofstede": {"pdi": 13, "idv": 54, "mas": 47, "uai": 81, "lto": 38, "ivr": 37},
+      "highlights": [
+        "Dugri (straight talk): interruption, challenge and bluntness are engagement — the most confrontational debating culture.",
+        "Chutzpah is admired; hierarchy is flat in practice (first names with the CEO), informal in dress.",
+        "Army-network trust: 'who did you serve with' opens doors; improvisation beats process.",
+        "Do not mistake argument for rejection — the shouting match often ends in a deal and a hug."
+      ]
+    },
+    "United Arab Emirates": {
+      "region": "mena", "globe_cluster": "Middle East", "lewis": "multi-active",
+      "meyer": {"comm": 85, "eval": 80, "lead": 85, "decide": 85, "trust": 88, "dis": 80, "sched": 80, "pers": 60},
+      "hofstede": {"pdi": 90, "idv": 36, "mas": 50, "uai": 66},
+      "highlights": [
+        "Wasta (connections) is infrastructure: the right Emirati sponsor or introducer changes everything.",
+        "Majlis protocol: coffee and extended courtesy talk open the meeting; never rush to the pitch.",
+        "Face is non-negotiable — a direct 'no' is rare; 'leave it with me' may be a polite refusal.",
+        "Friday-Saturday weekend; Ramadan working hours shrink and eating in public by day is banned.",
+        "Haggling is expected on almost everything except listed corporate rates; anchor high, concede slowly, keep warm."
+      ]
+    },
+    "Saudi Arabia": {
+      "region": "mena", "globe_cluster": "Middle East", "lewis": "multi-active",
+      "meyer": {"comm": 85, "eval": 80, "lead": 88, "decide": 88, "trust": 90, "dis": 85, "sched": 85, "pers": 60},
+      "hofstede": {"pdi": 95, "idv": 25, "mas": 60, "uai": 36, "lto": 36, "ivr": 16},
+      "highlights": [
+        "The senior prince/family decision-maker is the deal; everyone else is a channel to him.",
+        "Majlis etiquette: accept dates and cardamom coffee (shake cup to decline refill), right hand only.",
+        "Personal trust over paper: multiple visits, family inquiries, and patience are the price of entry.",
+        "Never ask about wives, never show sole of shoe, never rush — time is divine (insha'Allah semantics).",
+        "Contracts flexible by design: terms are the start of a relationship, not its end."
+      ]
+    },
+    "Egypt": {
+      "region": "mena", "globe_cluster": "Middle East", "lewis": "multi-active",
+      "meyer": {"comm": 85, "eval": 82, "lead": 85, "decide": 85, "trust": 88, "dis": 82, "sched": 85, "pers": 60},
+      "hofstede": {"pdi": 80, "idv": 25, "mas": 45, "uai": 80, "lto": 7, "ivr": 4},
+      "highlights": [
+        "Baksheesh and wasta culture: every process has a human key; tips and intermediaries lubricate.",
+        "Extreme high-context: listen for what is unsaid; a direct refusal is almost never spoken.",
+        "Politeness is lavish and commitments are soft — confirm everything in writing, gently, multiple times.",
+        "Bargaining is a social ritual with warmth; the first price is an invitation to a conversation."
+      ]
+    },
+    "Nigeria": {
+      "region": "subsaharan-africa", "globe_cluster": "Sub-Saharan Africa", "lewis": "multi-active",
+      "meyer": {"comm": 80, "eval": 72, "lead": 80, "decide": 82, "trust": 85, "dis": 75, "sched": 85, "pers": 55},
+      "hofstede": {"pdi": 80, "idv": 30, "mas": 60, "uai": 55, "lto": 13, "ivr": 84},
+      "highlights": [
+        "Greeting ritual is the meeting: ask about family, health, journey — cutting it kills the deal.",
+        "Titles, rank and age rule: address Doctor/Chief/Engineer properly; elders speak first.",
+        "Relationship and community networks decide; the formal org chart is a shadow of the real one.",
+        "Flexible time ('African time'), loud expressive debate, warm persistence — but confirm, confirm, confirm in writing.",
+        "Generosity signals seriousness: hosting and gifts (modest, culturally apt) are read as respect."
+      ]
+    },
+    "Kenya": {
+      "region": "subsaharan-africa", "globe_cluster": "Sub-Saharan Africa", "lewis": "multi-active",
+      "meyer": {"comm": 80, "eval": 75, "lead": 80, "decide": 80, "trust": 85, "dis": 78, "sched": 85, "pers": 55},
+      "hofstede": {"pdi": 70, "idv": 25, "mas": 40, "uai": 50, "lto": 9, "ivr": 40},
+      "highlights": [
+        "Ubuntu ethos: identity is communal; decisions go through clan, church and community elders.",
+        "Greeting hierarchy strictly observed — shake hands in order of seniority, two hands for elders.",
+        "'Hakuna matata' surface calm over high-context reading; a soft answer often hides a hard no.",
+        "M-Pesa-first business culture: digital, mobile, relationship-brokered."
+      ]
+    },
+    "South Africa": {
+      "region": "subsaharan-africa", "globe_cluster": "Sub-Saharan Africa", "lewis": "multi-active",
+      "meyer": {"comm": 60, "eval": 55, "lead": 55, "decide": 60, "trust": 55, "dis": 55, "sched": 50, "pers": 50},
+      "hofstede": {"pdi": 49, "idv": 65, "mas": 63, "uai": 49, "lto": 34, "ivr": 63},
+      "highlights": [
+        "Two business cultures in one country: corporate English-speaking SA is Anglo-linear; township and traditional sectors are relationship-first and communal — read which room you are in.",
+        "Ubuntu reconciliation etiquette: consult broadly, acknowledge history, never dismiss elders.",
+        "Direct-ish but diplomatic; braai (barbecue) invitations are the relationship engine.",
+        "Load-shedding realism: build schedule slack; patience with infrastructure is a professional skill."
+      ]
+    },
+    "Brazil": {
+      "region": "latin-america", "globe_cluster": "Latin America", "lewis": "multi-active",
+      "meyer": {"comm": 80, "eval": 70, "lead": 70, "decide": 72, "trust": 82, "dis": 70, "sched": 85, "pers": 50},
+      "hofstede": {"pdi": 69, "idv": 38, "mas": 49, "uai": 76, "lto": 44, "ivr": 59},
+      "highlights": [
+        "Jeitinho (improvised workaround) is a core skill: plans change, relationships absorb the shocks.",
+        "Personal warmth is the deal: physical proximity, first names fast, personal questions early.",
+        "Simpatía rule: never confront or embarrass; criticism is delivered obliquely or not at all.",
+        "Meetings run late and overlap; the conversation AFTER the meeting is where decisions actually happen.",
+        "Hierarchy with charisma: the patrão decides, but consensus-feeling is staged before it."
+      ]
+    },
+    "Mexico": {
+      "region": "latin-america", "globe_cluster": "Latin America", "lewis": "multi-active",
+      "meyer": {"comm": 80, "eval": 72, "lead": 75, "decide": 75, "trust": 80, "dis": 72, "sched": 82, "pers": 55},
+      "hofstede": {"pdi": 81, "idv": 30, "mas": 69, "uai": 82, "lto": 24, "ivr": 97},
+      "highlights": [
+        "Personalismo: the person, not the company, is the deal — loyalty runs to individuals.",
+        "Respect for hierarchy and titles (Licenciado, Ingeniero); the senior man's presence signals seriousness.",
+        "Simpatía and face: 'yes' to be polite is common; verify real agreement through a trusted lieutenant.",
+        "Long relationship dinners, tequila toasts; refusing hospitality is refusing the relationship.",
+        "Time is relationship-elastic: arrive personable, never visibly impatient."
+      ]
+    },
+    "Argentina": {
+      "region": "latin-america", "globe_cluster": "Latin America", "lewis": "multi-active",
+      "meyer": {"comm": 75, "eval": 68, "lead": 65, "decide": 70, "trust": 75, "dis": 65, "sched": 80, "pers": 60},
+      "hofstede": {"pdi": 49, "idv": 46, "mas": 56, "uai": 86, "lto": 20, "ivr": 62},
+      "highlights": [
+        "European-flavored Latin business culture: formal Spanish, style, and long meals matter.",
+        "Status-conscious and rhetorical; arguments are won with elegance as much as data.",
+        "Economic volatility made Argentines sophisticated skeptics: expect hard questions on downside scenarios.",
+        "Late dinners are business; noon meetings are coffee, not decisions."
+      ]
+    },
+    "Chile": {
+      "region": "latin-america", "globe_cluster": "Latin America", "lewis": "multi-active",
+      "meyer": {"comm": 75, "eval": 70, "lead": 70, "decide": 72, "trust": 75, "dis": 70, "sched": 75, "pers": 55},
+      "hofstede": {"pdi": 63, "idv": 23, "mas": 28, "uai": 86, "lto": 31, "ivr": 68},
+      "highlights": [
+        "Most formal and structured of LatAm: punctuality is respected, agendas followed, dress conservative.",
+        "High uncertainty avoidance: bring documentation, references, guarantees.",
+        "Reserved warmth: relationship still decides, but expressed through correctness and repeated contact."
+      ]
+    },
+    "Colombia": {
+      "region": "latin-america", "globe_cluster": "Latin America", "lewis": "multi-active",
+      "meyer": {"comm": 80, "eval": 75, "lead": 78, "decide": 80, "trust": 85, "dis": 75, "sched": 85, "pers": 55},
+      "hofstede": {"pdi": 67, "idv": 13, "mas": 64, "uai": 80, "lto": 13, "ivr": 83},
+      "highlights": [
+        "Among the most collectivist cultures on earth: the family/network IS the organization.",
+        "Extroverted warmth, personal questions, small gifts — the relationship IS the contract early on.",
+        "Face and harmony: indirect refusal culture; read enthusiasm carefully and re-confirm quietly.",
+        "Titles and formality at first (Don/Doña), then rapid personal closeness."
+      ]
+    },
+    "Peru": {
+      "region": "latin-america", "globe_cluster": "Latin America", "lewis": "multi-active",
+      "meyer": {"comm": 78, "eval": 72, "lead": 75, "decide": 75, "trust": 80, "dis": 72, "sched": 82, "pers": 55},
+      "hofstede": {"pdi": 64, "idv": 16, "mas": 42, "uai": 87, "lto": 25, "ivr": 46},
+      "highlights": [
+        "Formal, hierarchical, relationship-first; the senior contact's blessing moves everything.",
+        "High uncertainty avoidance: slow trust, detailed paper, repeated visits.",
+        "Indigenous and business cultures interweave — respect for elders and community land sensibilities is practical, not optional."
+      ]
+    },
+    "China": {
+      "region": "east-asia", "globe_cluster": "Confucian Asia", "lewis": "reactive",
+      "meyer": {"comm": 80, "eval": 80, "lead": 80, "decide": 55, "trust": 85, "dis": 80, "sched": 60, "pers": 55},
+      "hofstede": {"pdi": 80, "idv": 20, "mas": 66, "uai": 30, "lto": 87, "ivr": 24},
+      "highlights": [
+        "Mianzi (face) is the currency: never correct a Chinese counterpart in public, even factually.",
+        "Guanxi (relational networks) is the operating system: banquets, favors and intermediaries precede terms.",
+        "The contract is the START of the relationship, not its conclusion — expect renegotiation as circumstances evolve.",
+        "'Yes' means 'I hear you', not 'I agree'; 'maybe' and 'it will be difficult' usually mean no.",
+        "Hierarchy is steep but decisions are consensual-under-the-boss: the team pre-aligns (the real meeting happens before the meeting).",
+        "Long-term orientation: they will trade short-term margin for long-term position; price patiently.",
+        "Gift protocol: give/receive with both hands, modest value (anti-corruption law is strict), never a clock."
+      ]
+    },
+    "Hong Kong": {
+      "region": "east-asia", "globe_cluster": "Confucian Asia", "lewis": "reactive",
+      "meyer": {"comm": 80, "eval": 78, "lead": 78, "decide": 70, "trust": 72, "dis": 78, "sched": 60, "pers": 50},
+      "hofstede": {"pdi": 68, "idv": 25, "mas": 57, "uai": 29, "lto": 61, "ivr": 17},
+      "highlights": [
+        "Chinese face-and-relationship core wrapped in Anglo deal speed: fastest contracts in the Sinosphere.",
+        "Efficient, transactional surface over guanxi foundations — still relationship-gated underneath.",
+        "Cantonese dining etiquette at business banquets; respect seniority ordering at the table."
+      ]
+    },
+    "Taiwan": {
+      "region": "east-asia", "globe_cluster": "Confucian Asia", "lewis": "reactive",
+      "meyer": {"comm": 82, "eval": 80, "lead": 80, "decide": 65, "trust": 78, "dis": 80, "sched": 60, "pers": 52},
+      "hofstede": {"pdi": 58, "idv": 17, "mas": 45, "uai": 69, "lto": 93, "ivr": 49},
+      "highlights": [
+        "Softer, more indirect than mainland China: extra politeness layers, slower trust, deeper loyalty once won.",
+        "Consensus plus hierarchy: the boss decides after quiet alignment; give face to every senior person present.",
+        "Night-market banquet culture; gifting modest and gracious. Never discuss cross-strait politics."
+      ]
+    },
+    "Japan": {
+      "region": "east-asia", "globe_cluster": "Confucian Asia", "lewis": "reactive",
+      "meyer": {"comm": 90, "eval": 88, "lead": 72, "decide": 25, "trust": 70, "dis": 88, "sched": 15, "pers": 50},
+      "hofstede": {"pdi": 54, "idv": 46, "mas": 95, "uai": 92, "lto": 88, "ivr": 42},
+      "highlights": [
+        "Most consensual deciders on earth: nemawashi (root-binding) pre-aligns everyone — decisions are slow, execution instant, and a 'decided' thing never reopens.",
+        "Extreme high-context: the air between words carries the message; silence after your proposal is processing, not rejection.",
+        "Hierarchy is ceremonial and precise: meishi (card) exchange with two hands and a bow; seat order by seniority; never skip the visiting-card ritual.",
+        "Indirect refusal vocabulary: 'it is difficult', 'we will consider', silence — push for a clear yes and you force a face-losing no.",
+        "Perfectionism and risk-aversion (world-high UAI): bring exhaustive QC data, references, contingency plans.",
+        "Drinking (nomikai) is where the real consensus leaks out; never pour your own drink.",
+        "Punctuality is absolute — arrive 10 minutes early; the agenda is a covenant."
+      ]
+    },
+    "South Korea": {
+      "region": "east-asia", "globe_cluster": "Confucian Asia", "lewis": "reactive",
+      "meyer": {"comm": 85, "eval": 82, "lead": 82, "decide": 65, "trust": 75, "dis": 85, "sched": 50, "pers": 55},
+      "hofstede": {"pdi": 60, "idv": 18, "mas": 39, "uai": 85, "lto": 100, "ivr": 29},
+      "highlights": [
+        "Fastest-moving Confucian culture: ppali-ppali (hurry-hurry) pace inside a steep hierarchy — decisions come quicker than Japan, with less consensus depth.",
+        "Kibun (mood/face) management: keep the atmosphere harmonious; causing a senior to lose face is fatal.",
+        "Titles and hierarchy are rigid: two-handed card exchange, senior speaks first, drinking rituals (never pour your own glass, turn away when drinking before elders).",
+        "Longest-term orientation recorded: they will lose money for years to own a market.",
+        "'We will review it' often means no; use a trusted intermediary to extract the real answer."
+      ]
+    },
+    "India": {
+      "region": "south-asia", "globe_cluster": "Southern Asia", "lewis": "multi-active",
+      "meyer": {"comm": 75, "eval": 75, "lead": 82, "decide": 78, "trust": 80, "dis": 75, "sched": 78, "pers": 55},
+      "hofstede": {"pdi": 77, "idv": 48, "mas": 56, "uai": 40, "lto": 51, "ivr": 26},
+      "highlights": [
+        "Hierarchy decides: deference to the senior person is expected; skip-level pressure causes silent sabotage.",
+        "Jugaad (frugal improvisation) mindset: flexibility is a virtue; the plan is a hypothesis.",
+        "High-context harmony: a direct 'no' is rare — 'we'll try', 'should be possible', or head-wobble = polite maybe.",
+        "Time is polychronic: meetings start late, are interrupted, and relationships stretch schedules — but deadlines for YOUR deliverables are enforced hard.",
+        "Relationship + family small talk opens everything; food hospitality is generous (respect dietary rules by community).",
+        "Bargaining is a sport: first quotes are anchors; warm persistence beats cold logic."
+      ]
+    },
+    "Pakistan": {
+      "region": "south-asia", "globe_cluster": "Southern Asia", "lewis": "multi-active",
+      "meyer": {"comm": 80, "eval": 75, "lead": 82, "decide": 80, "trust": 85, "dis": 75, "sched": 80, "pers": 60},
+      "hofstede": {"pdi": 55, "idv": 14, "mas": 50, "uai": 70, "lto": 50},
+      "highlights": [
+        "Deeply relationship-first (host-guest ethics): tea, patience, personal trust before any term sheet.",
+        "Family firms dominate: the patriarch decides; heirs execute; outsiders need a family-trusted introducer.",
+        "Islamic etiquette: right hand for giving/receiving, no alcohol at business meals, prayer-time pauses are normal.",
+        "Indirect refusals: 'In shaa Allah' on timelines separates intent from commitment — re-confirm concretely."
+      ]
+    },
+    "Bangladesh": {
+      "region": "south-asia", "globe_cluster": "Southern Asia", "lewis": "multi-active",
+      "meyer": {"comm": 80, "eval": 75, "lead": 82, "decide": 80, "trust": 85, "dis": 75, "sched": 82, "pers": 58},
+      "hofstede": {"pdi": 80, "idv": 20, "mas": 55, "uai": 60},
+      "highlights": [
+        "Personal introduction networks open every door; cold outreach rarely works.",
+        "Politeness overrides candor: confirm agreements in writing via a trusted local partner.",
+        "Hierarchy steep; decisions slow at the top, fast when the owner blesses them."
+      ]
+    },
+    "Sri Lanka": {
+      "region": "south-asia", "globe_cluster": "Southern Asia", "lewis": "multi-active",
+      "meyer": {"comm": 80, "eval": 75, "lead": 82, "decide": 80, "trust": 85, "dis": 78, "sched": 82, "pers": 55},
+      "hofstede": {"pdi": 80, "idv": 35, "mas": 10, "uai": 45},
+      "highlights": [
+        "Ayubowan warmth with formal British-era manners: titles (Mr/Mrs) until invited otherwise.",
+        "Buddhist patience culture: unhurried meetings, indirect disagreement, gentle humor.",
+        "Hierarchy and family networks decide; Religious festivals (poya days) pause business monthly."
+      ]
+    },
+    "Singapore": {
+      "region": "southeast-asia", "globe_cluster": "Confucian Asia", "lewis": "reactive",
+      "meyer": {"comm": 75, "eval": 78, "lead": 78, "decide": 70, "trust": 70, "dis": 78, "sched": 55, "pers": 50},
+      "hofstede": {"pdi": 74, "idv": 20, "mas": 48, "uai": 8, "lto": 72, "ivr": 46},
+      "highlights": [
+        "Lowest uncertainty-avoidance culture on earth combined with rule-following precision: quick to try new deals, strict about compliance (fines culture).",
+        "Efficient, low-drama, contract-clean East-West hybrid: the easiest Asian entry point, but relationship depth still decides the big accounts.",
+        "Multiracial etiquette: match Malay/Indian/Chinese protocols; halal awareness at meals is basic respect.",
+        "Kiasu (fear of losing out) drives sharp bargaining; decisions are pragmatic and fast by consensus of a small top team."
+      ]
+    },
+    "Malaysia": {
+      "region": "southeast-asia", "globe_cluster": "Southeast Asia", "lewis": "multi-active",
+      "meyer": {"comm": 80, "eval": 80, "lead": 82, "decide": 75, "trust": 82, "dis": 82, "sched": 78, "pers": 50},
+      "hofstede": {"pdi": 100, "idv": 26, "mas": 50, "uai": 36, "lto": 41, "ivr": 57},
+      "highlights": [
+        "Highest recorded power distance: absolute deference to rank; never bypass or contradict a senior Malay in public.",
+        "Bumiputera/Malay-Chinese/Indian business ecosystems each with own norms — identify which network you're in.",
+        "Face and harmony: refusals come as 'boleh cuba' (can try); read commitment levels carefully.",
+        "Ramadan pacing, Friday prayers, no left-hand giving; halal dining default."
+      ]
+    },
+    "Indonesia": {
+      "region": "southeast-asia", "globe_cluster": "Southeast Asia", "lewis": "multi-active",
+      "meyer": {"comm": 85, "eval": 85, "lead": 85, "decide": 75, "trust": 85, "dis": 85, "sched": 82, "pers": 50},
+      "hofstede": {"pdi": 78, "idv": 14, "mas": 46, "uai": 48, "lto": 62, "ivr": 38},
+      "highlights": [
+        "Pancasila consensus + musyawarah (deliberation-to-accord): meetings are long, courteous, and the decision emerges from socialization outside the room.",
+        "Face (jaga muka) is absolute: never say a hard no; indirect channels carry the real message.",
+        "Paternal hierarchy with the Bapak (father/patron) at the center — the patron's blessing IS the decision.",
+        "Patience with time ('jam karet' = rubber time); Ramadan and Lebaran shut business for weeks.",
+        "Right hand only for exchange; modest gifts accepted graciously; never show anger — composure is power."
+      ]
+    },
+    "Thailand": {
+      "region": "southeast-asia", "globe_cluster": "Southeast Asia", "lewis": "multi-active",
+      "meyer": {"comm": 85, "eval": 85, "lead": 85, "decide": 80, "trust": 88, "dis": 85, "sched": 82, "pers": 50},
+      "hofstede": {"pdi": 64, "idv": 20, "mas": 34, "uai": 64, "lto": 32, "ivr": 45},
+      "highlights": [
+        "Kreng jai (considerate deference) silences disagreement: a Thai team will warmly agree in the room and quietly not comply after — verify through allies, not confrontation.",
+        "Hierarchy with the boss as khun po (father figure): the senior person's nod matters more than the meeting's consensus.",
+        "Sanuk (fun) belongs in work: meetings with warmth and lightness outperform formal pressure.",
+        "Face protection: never lose your temper — visible anger marks YOU, not them, as the problem.",
+        "Wai greeting etiquette (press palms, slight bow) by seniority; never touch heads, never point feet.",
+        "Monarchy is sacred ground: zero jokes, zero commentary, zero exceptions (lèse-majesté is enforced).",
+        "'Up to you' often means 'please decide so no Thai has to refuse you'."
+      ]
+    },
+    "Vietnam": {
+      "region": "southeast-asia", "globe_cluster": "Southeast Asia", "lewis": "multi-active",
+      "meyer": {"comm": 80, "eval": 80, "lead": 82, "decide": 78, "trust": 85, "dis": 82, "sched": 80, "pers": 50},
+      "hofstede": {"pdi": 70, "idv": 20, "mas": 40, "uai": 30, "lto": 57, "ivr": 35},
+      "highlights": [
+        "Confucian hierarchy with fast-dealing energy: the boss decides, but negotiation is vigorous, patient, and daily.",
+        "Relationship (quan hệ) through introducers and shared meals precedes terms; tea and toasts are contract infrastructure.",
+        "Face and harmony on the surface, hard bargaining underneath — the first price is an opening joke.",
+        "Yes may mean 'I hear you'; confirm specifics in writing without forcing public admission.",
+        "Growing faster than process: contracts get renegotiated as reality shifts; keep warm, keep logging."
+      ]
+    },
+    "Philippines": {
+      "region": "southeast-asia", "globe_cluster": "Southeast Asia", "lewis": "multi-active",
+      "meyer": {"comm": 80, "eval": 78, "lead": 82, "decide": 78, "trust": 85, "dis": 82, "sched": 80, "pers": 50},
+      "hofstede": {"pdi": 94, "idv": 32, "mas": 64, "uai": 44, "lto": 27, "ivr": 40},
+      "highlights": [
+        "Hiya (shame/face) and utang na loob (debt of gratitude) are the real contract: favors create binding obligations.",
+        "Pakikisama (smooth social fit): group harmony decides; the amiable consensus in the room may hide private objections surfaced later through a go-between.",
+        "Family-first business: the clan network is the org chart; a family elder's word outranks titles.",
+        "Warm, Filipino/English bilingual, US-style directness tolerated more than elsewhere in ASEAN — but never embarrass anyone publicly.",
+        "'Bahala na' fatalism on deadlines: add buffer, follow up personally, keep it light."
+      ]
+    },
+    "Laos": {
+      "region": "southeast-asia", "globe_cluster": "Southeast Asia", "lewis": "multi-active", "extrapolated": true,
+      "meyer": {"comm": 88, "eval": 85, "lead": 88, "decide": 85, "trust": 90, "dis": 88, "sched": 88, "pers": 50},
+      "hofstede": {"pdi": 70, "idv": 20, "mas": 35, "uai": 60, "lto": 45, "ivr": 40},
+      "highlights": [
+        "One of the most relationship-first cultures on earth: no meaningful deal without invested personal time — multiple meals, family inquiries, patience measured in months.",
+        "Noy-noy (take it easy) pace: deadlines are aspirations; pushing hard reads as disrespect, not efficiency.",
+        "Extreme harmony culture: direct refusal almost never happens; 'yes' = 'I acknowledge', silence or deflection = no. A trusted Lao intermediary is mandatory to decode.",
+        "Hierarchy + patronage: the senior official/director's private blessing decides; formal signatures follow informally settled reality.",
+        "Face is everything: never criticize publicly, never raise your voice, never force a cornered 'no'.",
+        "Baci ceremony and toasts build trust (accept them); monks and wats are honored; heads never touched.",
+        "Verbal > written: what the senior person says across the table outweighs the document that follows."
+      ]
+    },
+    "Cambodia": {
+      "region": "southeast-asia", "globe_cluster": "Southeast Asia", "lewis": "multi-active", "extrapolated": true,
+      "meyer": {"comm": 85, "eval": 82, "lead": 85, "decide": 80, "trust": 88, "dis": 85, "sched": 85, "pers": 50},
+      "hofstede": {"pdi": 72, "idv": 18, "mas": 35, "uai": 55, "lto": 48, "ivr": 38},
+      "highlights": [
+        "Gentle, formal, hierarchy-centered: Samdech/Achar titles honored; elders and monks greeted first, with a sompeah if expected.",
+        "Harmony over candor: indirect refusals; use a well-connected Khmer intermediary to learn the true position.",
+        "Patron-client networks decide; patience and modest gifts of respect (not inducements) sustain relationships."
+      ]
+    },
+    "Myanmar": {
+      "region": "southeast-asia", "globe_cluster": "Southeast Asia", "lewis": "multi-active", "extrapolated": true,
+      "meyer": {"comm": 85, "eval": 82, "lead": 88, "decide": 85, "trust": 88, "dis": 85, "sched": 85, "pers": 50},
+      "hofstede": {"pdi": 74, "idv": 20, "mas": 40, "uai": 50, "lto": 40, "ivr": 45},
+      "highlights": [
+        "Anade (reluctance to impose) culture: nobody will tell you a hard truth to your face; decisions surface through intermediaries.",
+        "Hierarchy and military-era caution: approvals concentrate at the top; process is opaque — verify everything through trusted partners.",
+        "Generous hospitality ethics; Buddhism frames the calendar and courtesy."
+      ]
+    }
+  }
+}
