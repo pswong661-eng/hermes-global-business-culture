@@ -1,0 +1,76 @@
+name: drift-ci
+
+on:
+  schedule:
+    - cron: "30 2 * * 1" # Mondays 02:30 UTC = 09:30 Vientiane
+  workflow_dispatch:
+    inputs:
+      force_fail:
+        description: "Force a failure to test the Telegram notify path"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.14"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install pytest
+      - run: python -m pytest tests/ -q -o addopts=
+
+  validate-hermes-main:
+    # The drift gate: install Hermes from NousResearch/hermes-agent main and
+    # run the same admission checks the catalog runs. PyPI hermes-agent is
+    # v0.19 and predates `plugins validate`, so main is installed editable
+    # (upstream blocks wheel/sdist builds).
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: astral-sh/setup-uv@v5
+      - name: Install Hermes from main (editable)
+        run: |
+          git clone --depth 1 https://github.com/NousResearch/hermes-agent.git /tmp/hermes
+          uv venv .venv
+          uv pip install -p .venv/bin/python -e /tmp/hermes
+      - name: hermes plugins doctor --ci
+        run: .venv/bin/hermes plugins doctor "$GITHUB_WORKSPACE" --ci
+      - name: hermes plugins validate
+        run: .venv/bin/hermes plugins validate "$GITHUB_WORKSPACE"
+      - name: Forced failure (notify-path test)
+        if: ${{ inputs.force_fail == true }}
+        run: exit 1
+
+  notify:
+    needs: [test, validate-hermes-main]
+    if: ${{ failure() && github.event_name != 'pull_request' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Telegram
+        env:
+          TG_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TG_CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          if [ -z "$TG_TOKEN" ] || [ -z "$TG_CHAT" ]; then
+            echo "::warning::Telegram secrets not set — skipping ping"
+            exit 0
+          fi
+          MSG="🔴 global-business-culture drift-ci FAILED (${{ github.event_name }}) — ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          if [ "${{ inputs.force_fail }}" = "true" ]; then
+            MSG="🧪 TEST — notify-path check (safe to ignore): ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          fi
+          RESP=$(curl -sS -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
+            -d chat_id="$TG_CHAT" --data-urlencode text="$MSG")
+          echo "$RESP"
+          echo "$RESP" | grep -q '"ok":true'
