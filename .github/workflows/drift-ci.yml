@@ -35,19 +35,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
       - uses: astral-sh/setup-uv@v5
-      - name: Install Hermes from main (editable)
+      - name: Install Hermes from main (locked env)
+        # Upstream's build backend blocks wheel/sdist builds and editable
+        # installs pull no dependencies — the supported route is uv sync
+        # against the repo's own lockfile.
         run: |
           git clone --depth 1 https://github.com/NousResearch/hermes-agent.git /tmp/hermes
-          uv venv .venv
-          uv pip install -p .venv/bin/python -e /tmp/hermes
+          cd /tmp/hermes
+          uv sync --frozen
       - name: hermes plugins doctor --ci
-        run: .venv/bin/hermes plugins doctor "$GITHUB_WORKSPACE" --ci
+        run: /tmp/hermes/.venv/bin/hermes plugins doctor "$GITHUB_WORKSPACE" --ci
       - name: hermes plugins validate
-        run: .venv/bin/hermes plugins validate "$GITHUB_WORKSPACE"
+        run: /tmp/hermes/.venv/bin/hermes plugins validate "$GITHUB_WORKSPACE"
       - name: Forced failure (notify-path test)
         if: ${{ inputs.force_fail == true }}
         run: exit 1
