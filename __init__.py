@@ -29,8 +29,8 @@ def _format_slash_brief(raw_args):
                 "Usage: /culture <country> [task] — e.g. /culture Japan negotiation.\n"
                 "Tasks: negotiation, first meeting, management, communication, payment, trip."
             )
-        country = parts[0]
-        task = " ".join(parts[1:]) or None
+        country = tools._clip(parts[0])
+        task = tools._clip(" ".join(parts[1:])) or None
         payload = {"country": country}
         if task:
             payload["task"] = task

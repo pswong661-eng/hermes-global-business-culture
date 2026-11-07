@@ -290,6 +290,20 @@ def _risk(abs_delta):
     return "LOW"
 
 
+# Security bound: country/task/query strings never legitimately exceed this.
+# Clipping at entry caps compute on pathological inputs and keeps error echoes
+# small so a hostile tool argument cannot flood the model context.
+_MAX_INPUT = 200
+
+
+def _clip(raw):
+    """Bound an attacker-influenced string to _MAX_INPUT chars (+ length marker)."""
+    if not isinstance(raw, str) or len(raw) <= _MAX_INPUT:
+        return raw
+    return "%s...[%d chars total]" % (raw[:_MAX_INPUT], len(raw))
+
+
+
 def _meyer_view(name):
     entry = COUNTRIES[name]
     out = {}
@@ -316,8 +330,8 @@ def _region_data(name):
 
 def culture_brief(args, **kwargs):
     try:
-        raw_country = args.get("country", "")
-        task = _resolve_task(args.get("task", ""))
+        raw_country = _clip(args.get("country", ""))
+        task = _resolve_task(_clip(args.get("task", "")))
         name, suggestions = _resolve_country(raw_country)
         if name is None:
             return json.dumps({
@@ -363,16 +377,18 @@ def culture_brief(args, **kwargs):
 
 def culture_gap_analysis(args, **kwargs):
     try:
-        home, sug_h = _resolve_country(args.get("home_country", ""))
+        raw_home = _clip(args.get("home_country", ""))
+        home, sug_h = _resolve_country(raw_home)
         if home is None:
             return json.dumps({
-                "error": "home_country not found: %r" % args.get("home_country"),
+                "error": "home_country not found: %r" % raw_home,
                 "suggestions": sug_h,
             })
-        host, sug_o = _resolve_country(args.get("host_country", ""))
+        raw_host = _clip(args.get("host_country", ""))
+        host, sug_o = _resolve_country(raw_host)
         if host is None:
             return json.dumps({
-                "error": "host_country not found: %r" % args.get("host_country"),
+                "error": "host_country not found: %r" % raw_host,
                 "suggestions": sug_o,
             })
         if home == host:
@@ -380,7 +396,7 @@ def culture_gap_analysis(args, **kwargs):
                 "error": "home and host are the same country (%s)" % home,
                 "hint": "Gap analysis compares two different cultures.",
             })
-        task = _resolve_task(args.get("task", ""))
+        task = _resolve_task(_clip(args.get("task", "")))
         weights = _TASK_WEIGHTS.get(task, {}) if task else {}
 
         home_e, host_e = COUNTRIES[home], COUNTRIES[host]
@@ -472,7 +488,7 @@ def culture_gap_analysis(args, **kwargs):
 
 def culture_countries(args, **kwargs):
     try:
-        query = _normalize(args.get("query", ""))
+        query = _normalize(_clip(args.get("query", "")))
         by_region = {}
         for name in sorted(COUNTRIES):
             region = COUNTRIES[name].get("region", "other")
