@@ -61,16 +61,18 @@ jobs:
         env:
           TG_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TG_CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
+          MSG: "${{ inputs.force_fail == 'true' && format('🧪 TEST — notify-path check (safe to ignore): {0}/{1}/actions/runs/{2}', github.server_url, github.repository, github.run_id) || format('🔴 global-business-culture drift-ci FAILED ({0}) — {1}/{2}/actions/runs/{3}', github.event_name, github.server_url, github.repository, github.run_id) }}"
         run: |
-          if [ -z "$TG_TOKEN" ] || [ -z "$TG_CHAT" ]; then
-            echo "::warning::Telegram secrets not set — skipping ping"
-            exit 0
-          fi
-          MSG="🔴 global-business-culture drift-ci FAILED (${{ github.event_name }}) — ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-          if [ "${{ inputs.force_fail }}" = "true" ]; then
-            MSG="🧪 TEST — notify-path check (safe to ignore): ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-          fi
-          RESP=$(curl -sS -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
-            -d chat_id="$TG_CHAT" --data-urlencode text="$MSG")
-          echo "$RESP"
-          echo "$RESP" | grep -q '"ok":true'
+          python3 - <<'PY'
+          import json, os, urllib.request
+          tok, chat = os.environ.get("TG_TOKEN"), os.environ.get("TG_CHAT")
+          if not tok or not chat:
+              print("::warning::Telegram secrets not set — skipping ping")
+              raise SystemExit(0)
+          req = urllib.request.Request(
+              "https://api.telegram.org/bot%s/sendMessage" % tok,
+              data=json.dumps({"chat_id": chat, "text": os.environ["MSG"]}).encode(),
+              headers={"Content-Type": "application/json"})
+          resp = json.load(urllib.request.urlopen(req, timeout=30))
+          raise SystemExit(0 if resp.get("ok") is True else 1)
+          PY
