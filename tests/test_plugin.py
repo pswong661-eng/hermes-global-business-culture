@@ -202,6 +202,17 @@ class TestGap:
 
 # ---------------------------------------------------------------- countries list
 
+    def test_gap_flags_extrapolated_home_or_host(self):
+        for home, host, who in (("Laos", "Australia", "Laos (home)"),
+                                ("Australia", "Laos", "Laos (host)")):
+            out = json.loads(tools.culture_gap_analysis({"home_country": home, "host_country": host}))
+            assert who in out.get("data_note", "")
+        both = json.loads(tools.culture_gap_analysis({"home_country": "Laos", "host_country": "Cambodia"}))
+        assert "Laos (home)" in both["data_note"] and "Cambodia (host)" in both["data_note"]
+        clean = json.loads(tools.culture_gap_analysis({"home_country": "Germany", "host_country": "Australia"}))
+        assert "data_note" not in clean
+
+
 class TestCountries:
     def test_list_all(self):
         out = json.loads(tools.culture_countries({}))

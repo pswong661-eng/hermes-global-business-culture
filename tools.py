@@ -477,9 +477,15 @@ def culture_gap_analysis(args, **kwargs):
                 ),
             },
         }
-        if COUNTRIES[host].get("extrapolated"):
+        extrap = [
+            "%s (%s)" % (name, role)
+            for name, role in ((home, "home"), (host, "host"))
+            if COUNTRIES[name].get("extrapolated")
+        ]
+        if extrap:
             result["data_note"] = (
-                "Host scale positions extrapolated from GLOBE-cluster neighbours; treat as directional."
+                "Scale positions for %s extrapolated from GLOBE-cluster neighbours; "
+                "treat as directional." % " and ".join(extrap)
             )
         return json.dumps(result, ensure_ascii=False)
     except Exception as exc:
