@@ -213,6 +213,26 @@ class TestGap:
         assert "data_note" not in clean
 
 
+    def test_gap_low_risk_has_no_overstated_advice(self):
+        for home, host in (("South Korea", "Vietnam"), ("Vietnam", "South Korea")):
+            out = json.loads(tools.culture_gap_analysis({"home_country": home, "host_country": host}))
+            low = [g for g in out["gaps_ranked"] if g["risk"] == "LOW"]
+            assert low
+            for g in low:
+                assert "close" in g["misread_risk"] and "No special adaptation" in g["adaptation"]
+
+    def test_gap_advice_matches_direction_both_ways(self):
+        for home, host in (("Japan", "Australia"), ("Australia", "Japan"),
+                           ("South Korea", "Vietnam"), ("Vietnam", "South Korea")):
+            out = json.loads(tools.culture_gap_analysis({"home_country": home, "host_country": host}))
+            hi = [g for g in out["gaps_ranked"] if g["risk"] == "HIGH"]
+            assert all(g["misread_risk"] and g["adaptation"] for g in hi)
+        ja = json.loads(tools.culture_gap_analysis({"home_country": "Japan", "host_country": "Australia"}))
+        aj = json.loads(tools.culture_gap_analysis({"home_country": "Australia", "host_country": "Japan"}))
+        trust = lambda o: next(g for g in o["gaps_ranked"] if g["scale"] == "trust")
+        assert "competence" in trust(ja)["misread_risk"] and "meals" in trust(aj)["misread_risk"]
+
+
 class TestCountries:
     def test_list_all(self):
         out = json.loads(tools.culture_countries({}))

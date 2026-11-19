@@ -410,6 +410,10 @@ def culture_gap_analysis(args, **kwargs):
             ad = abs(delta)
             direction = "higher" if delta > 0 else "lower"
             risk, adapt = _GAP_MEANINGS.get(key, {}).get(direction, ("", ""))
+            if _risk(ad) == "LOW":
+                # Templates describe a large gap; at small distances they would overstate it.
+                risk = "Positions are close (%s %d vs %d): little risk of misreading each other here." % (label, h, o)
+                adapt = "No special adaptation needed on this scale."
             gaps.append({
                 "scale": key,
                 "scale_label": label,
