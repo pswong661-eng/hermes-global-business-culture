@@ -10,6 +10,38 @@ This is data + arithmetic, not prompt text: the gap analysis ranks the exact sca
 distances between two cultures, names the misread each gap produces, and prescribes
 adaptation moves — the same inputs, every time, fully offline.
 
+## See it in action
+
+![Demo: a Lao exec preparing to negotiate with an Australian buyer — ranked cultural gaps, the misread each one causes, and what to do](assets/demo.gif)
+
+*Condensed replay of real `culture_gap_analysis` output (Laos → Australia, negotiation).*
+
+## Try these prompts
+
+Install, then paste any of these into Hermes. Each one triggers a real tool call
+(the tool and task are shown so you can see what runs).
+
+**1. Studying in Australia** — `culture_gap_analysis` · Laos → Australia · *email/communication*
+
+> I'm a Lao professional applying for a master's scholarship in Australia. I need to
+> email a potential supervisor and then do a video interview with the admissions panel
+> next week. How will my communication style be read, and what should I change?
+
+**2. Inviting Australian mining companies to Laos** — `culture_gap_analysis` · Laos → Australia · *first meeting*
+
+> My team is inviting Australian mining companies to visit Laos and explore copper,
+> gold and potash opportunities. We've never hosted Australian mining executives.
+> How will they expect the first meeting to run, and what are they likely to misread about us?
+
+**3. Cross-border trading partnership** — `culture_gap_analysis` · Laos → Australia · *negotiation*
+
+> I run a Lao coffee export company and want to sign a distribution partnership with an
+> Australian importer. Prepare me for the negotiation: where will our styles clash on
+> trust, disagreement and deadlines, and how do I adapt?
+
+Swap in any of the 57 supported economies (try Thailand, China, Vietnam, Japan), or use
+`/culture Australia first meeting` for an instant one-country brief.
+
 ## Tools
 
 | Tool | What it does |
